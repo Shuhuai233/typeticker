@@ -5,6 +5,17 @@
 *.translation
 export_presets.cfg
 
+# Exported game builds
+*.exe
+*.x86_64
+*.x86
+*.arm64
+*.arm
+*.pck
+*.apk
+*.aab
+*.ipa
+
 # Mono-specific ignores (C#)
 .mono/
 data_*/
@@ -13,3 +24,8 @@ mono_crash.*.json
 # OS-generated files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Editor directories
+.vscode/
+.idea/
