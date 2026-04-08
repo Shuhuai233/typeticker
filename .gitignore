@@ -3,7 +3,7 @@
 # Godot-specific ignores
 .godot/
 *.translation
-export_presets.cfg
+# export_presets.cfg is committed so CI can build exports
 
 # Exported game builds
 *.exe
