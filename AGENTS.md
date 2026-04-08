@@ -27,6 +27,9 @@ assets/             # sprites, sounds, fonts (currently empty)
 Open in Godot 4 editor: **Project Manager → Import → select `project.godot`**
 Run: **F5** (or the play button) — no CLI build step exists for GDScript projects
 
+## Tooling
+There is no lint, format, typecheck, test runner, or CI configured. Static analysis is editor-only (Godot's built-in). Do not look for `gdlint`, `gdformat`, GUT, or any Makefile/taskfile — none exist.
+
 ## Git
 - Branch: `master`
 - `.godot/` cache directory and `*.translation` files are gitignored — do not commit them
