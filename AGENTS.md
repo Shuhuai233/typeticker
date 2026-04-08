@@ -2,6 +2,7 @@
 
 ## Project
 Godot 4.2 project using GDScript and the GL Compatibility renderer.
+A "Bongo Cat"-style typing visualizer: a cat drawn entirely via GDScript `draw_*` calls reacts to keypresses — left paw taps for left-side keys, right paw for right-side keys. No external image assets.
 
 ## Structure
 ```
