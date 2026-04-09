@@ -1,0 +1,36 @@
+# Godot 4 .gitignore
+
+# Godot-specific ignores
+.godot/
+*.translation
+# export_presets.cfg is committed so CI can build exports
+
+# Build output — attached to GitHub Releases, not committed
+build/
+
+# Compiled binaries
+extensions/global_input/bin/
+
+# Exported game builds
+*.x86_64
+*.x86
+*.arm64
+*.arm
+*.pck
+*.apk
+*.aab
+*.ipa
+
+# Mono-specific ignores (C#)
+.mono/
+data_*/
+mono_crash.*.json
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories
+.vscode/
+.idea/

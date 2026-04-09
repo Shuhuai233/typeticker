@@ -1,0 +1,32 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes in front of properties
+;   one key per line, '=' or ':' as separator,
+;   no spaces before prefix character or between colon and value
+; https://docs.godotengine.org/en/stable/tutorials/migration_guides/upgrading_to_godot_4.html
+
+config_version=5
+
+[application]
+
+config/name="Desktop Pet - Whip Edition"
+config/description="Desktop Pet - Master & Tool Person Meme"
+run/main_scene="res://scenes/DesktopPet.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+
+[display]
+
+window/size/viewport_width=400
+window/size/viewport_height=240
+window/size/resizable=false
+window/size/transparent=true
+window/size/borderless=true
+window/per_pixel_transparency/allowed=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
