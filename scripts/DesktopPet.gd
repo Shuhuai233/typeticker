@@ -41,7 +41,7 @@ const SAVE_INTERVAL := 5.0
 
 func _ready() -> void:
 	config = load("res://scripts/Config.gd").new()
-	config.load()
+	config.load_config()
 	torture_count = config.counter
 	scale_val     = config.scale
 	opacity_val   = config.opacity
@@ -143,7 +143,7 @@ func _save() -> void:
 	config.counter = torture_count
 	config.scale   = scale_val
 	config.opacity = opacity_val
-	config.save(get_window().position)
+	config.save_config(get_window().position)
 
 func _input(event: InputEvent) -> void:
 	# Ctrl+R = reset

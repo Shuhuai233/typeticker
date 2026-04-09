@@ -13,7 +13,7 @@ var window_y: int = 100
 func get_config_path() -> String:
 	return OS.get_executable_path().get_base_dir().path_join(CONFIG_FILENAME)
 
-func load() -> void:
+func load_config() -> void:
 	var path := get_config_path()
 	if not FileAccess.file_exists(path):
 		return
@@ -31,7 +31,7 @@ func load() -> void:
 	window_x  = data.get("window_x",  window_x)
 	window_y  = data.get("window_y",  window_y)
 
-func save(win_pos: Vector2i) -> void:
+func save_config(win_pos: Vector2i) -> void:
 	window_x = win_pos.x
 	window_y = win_pos.y
 	var data := {
