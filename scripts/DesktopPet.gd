@@ -1,6 +1,6 @@
 extends Node2D
 
-const VERSION := "v0.5.1"
+const VERSION := "v0.5.5"
 const SKINS := ["whip", "programmer", "anime", "skeleton", "robot"]
 const SKIN_LABELS := {
 	"whip":       "1. AI Master + Wojak",
@@ -56,7 +56,7 @@ func _ready() -> void:
 	win.position = Vector2i(config.window_x, config.window_y)
 	RenderingServer.set_default_clear_color(Color(0, 0, 0, 0))
 	_apply_scale()
-	_load_skin(config.skin)
+	_load_skin_by_id(config.skin)
 	_init_hook()
 	_build_menu()
 
@@ -66,7 +66,7 @@ func _apply_scale() -> void:
 	win.content_scale_factor = scale_val
 	modulate.a = opacity_val
 
-func _load_skin(skin_id: String) -> void:
+func _load_skin_by_id(skin_id: String) -> void:
 	config.skin = skin_id
 	match skin_id:
 		"whip":       current_skin = load("res://scripts/skins/SkinWhip.gd").new()
@@ -221,7 +221,7 @@ func _get_menu_item_at(pos: Vector2) -> int:
 
 func _execute_menu(action: String) -> void:
 	if action.begins_with("skin:"):
-		_load_skin(action.substr(5))
+		_load_skin_by_id(action.substr(5))
 		_build_menu()
 	elif action.begins_with("scale:"):
 		scale_val = action.substr(6).to_float()
