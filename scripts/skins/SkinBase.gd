@@ -23,7 +23,7 @@ func trigger() -> void:
 	whip_t = 0.0
 	react_t = 0.0
 
-func draw(canvas: Node2D, w: float, h: float) -> void:
+func draw(_canvas: Node2D, _w: float, _h: float) -> void:
 	pass  # Override in each skin
 
 func cubic_bezier(p0: Vector2, p1: Vector2, p2: Vector2, p3: Vector2, t: float) -> Vector2:

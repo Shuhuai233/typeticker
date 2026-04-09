@@ -66,9 +66,9 @@ func _apply_scale() -> void:
 	win.content_scale_factor = scale_val
 	modulate.a = opacity_val
 
-func _load_skin(name: String) -> void:
-	config.skin = name
-	match name:
+func _load_skin(skin_id: String) -> void:
+	config.skin = skin_id
+	match skin_id:
 		"whip":       current_skin = load("res://scripts/skins/SkinWhip.gd").new()
 		"programmer": current_skin = load("res://scripts/skins/SkinProgrammer.gd").new()
 		"anime":      current_skin = load("res://scripts/skins/SkinAnime.gd").new()

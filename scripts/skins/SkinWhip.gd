@@ -101,7 +101,7 @@ func _draw_wojak(c: Node2D, pos: Vector2) -> void:
 func _draw_sad_eye(c: Node2D, center: Vector2) -> void:
 	c.draw_circle(center, 6, Color.WHITE)
 	c.draw_circle(center, 6, C_OUTLINE, false, 1.0)
-	var po := Vector2(0, 2+(react_t*2 if is_animating else 0))
+	var po := Vector2(0, 2 + (react_t * 2.0 if is_animating else 0.0))
 	c.draw_circle(center+po, 3, C_DARK)
 	c.draw_arc(center, 6, 0, PI, 16, C_OUTLINE, 2.0)
 	var droop := 0.3+(react_t*0.4 if is_animating else 0.0)
