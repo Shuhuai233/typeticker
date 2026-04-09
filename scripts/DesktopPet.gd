@@ -1,6 +1,6 @@
 extends Node2D
 
-const VERSION := "v0.5.5"
+const VERSION := "v0.5.6"
 const SKINS := ["whip", "programmer", "anime", "skeleton", "robot"]
 const SKIN_LABELS := {
 	"whip":       "1. AI Master + Wojak",
@@ -19,7 +19,7 @@ var menu_visible: bool = false
 var menu_draw_pos: Vector2 = Vector2.ZERO  # actual drawn position (clamped)
 var menu_items: Array = []
 var hovered_item: int = -1
-const MENU_ITEM_H := 22.0
+const MENU_ITEM_H := 14.0
 const MENU_W := 200.0
 
 # Settings gear button
