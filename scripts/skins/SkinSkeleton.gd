@@ -83,7 +83,7 @@ func _draw_skeleton(c: Node2D, pos: Vector2) -> void:
 		for i in range(3):
 			var ang := idle_t * 4.0 + i * TAU / 3.0
 			var bp := p + Vector2(cos(ang)*55, sin(ang)*40 - 20)
-			var ba := sinf(react_t * PI)
+			var ba: float = sin(react_t * PI)
 			c.draw_line(bp, bp+Vector2(10,4), Color(C_BONE,ba), 3.0)
 			c.draw_circle(bp, 4*ba, Color(C_BONE,ba))
 			c.draw_circle(bp+Vector2(10,4), 4*ba, Color(C_BONE,ba))

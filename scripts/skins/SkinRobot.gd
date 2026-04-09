@@ -86,7 +86,7 @@ func _draw_robot(c: Node2D, pos: Vector2) -> void:
 			var ang := idle_t * 8.0 + i * TAU / 5.0
 			var sr := 35.0 + sin(idle_t*10+i)*10.0
 			var sp := p + Vector2(cos(ang)*sr, sin(ang)*sr - 20)
-			var sa := sinf(react_t * PI)
+			var sa: float = sin(react_t * PI)
 			c.draw_line(sp, sp+Vector2(cos(ang+0.5)*6, sin(ang+0.5)*6),
 				Color(C_SPARK, sa), 2.0)
 

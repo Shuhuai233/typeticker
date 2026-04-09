@@ -102,7 +102,7 @@ func _draw_chibi(c: Node2D, pos: Vector2) -> void:
 		for i in range(4):
 			var ang := idle_t * 3.0 + i * PI / 2.0
 			var sp := p + Vector2(cos(ang)*45, sin(ang)*35)
-			var sa := sinf(react_t * PI)
+			var sa: float = sin(react_t * PI)
 			_draw_star(c, sp, 6.0*sa, Color(C_STAR, sa))
 
 func _draw_anime_eye(c: Node2D, center: Vector2, excited: bool) -> void:

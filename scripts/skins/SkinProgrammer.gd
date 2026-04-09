@@ -73,7 +73,7 @@ func _draw_dev(c: Node2D, pos: Vector2) -> void:
 
 	# Sweat drop when slamming
 	if is_animating:
-		var sa := minf(whip_t * 2.0, 1.0)
+		var sa: float = min(whip_t * 2.0, 1.0)
 		c.draw_circle(hp+Vector2(20, -15), 4*sa, Color(C_SWEAT, sa))
 		c.draw_circle(hp+Vector2(22, -8),  3*sa, Color(C_SWEAT, sa*0.7))
 
